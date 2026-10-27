@@ -47,3 +47,16 @@ const variations = {
     }
   `,
 };
+
+const Button = styled.button`
+  border: none;
+  background: #1b1beb;
+  color: white;
+  font-size: 20px;
+  border-radius: 6px;
+  padding: 14px 18px;
+  cursor: pointer;
+  margin: 10px;
+`;
+
+export default Button;
