@@ -1,12 +1,7 @@
 import styled from "styled-components";
 import GlobalStyles from "./styles/GlobalStyles";
 import Button from "./ui/Button";
-
-const H1 = styled.h1`
-  font-family: "Arial", sans-serif;
-  font-size: 60px;
-  font-weight: bold;
-`;
+import Heading from "./ui/Heading";
 
 const StyledApp = styled.div`
   background-color: #d5d;
@@ -17,7 +12,9 @@ function App() {
     <>
       <GlobalStyles />
       <StyledApp>
-        <H1>The wild oasis</H1>
+        <Heading as="h1">The wild oasis</Heading>
+        <Heading as="h2">The wild oasis</Heading>
+        <Heading as="h3">The wild oasis</Heading>
         <Button onClick={() => alert("salom me")}>Click me</Button>
         <Button>Click Us</Button>
       </StyledApp>
