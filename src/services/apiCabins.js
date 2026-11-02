@@ -10,6 +10,8 @@ export async function getCabins() {
 }
 
 export async function createCabin(newCabin) {
+  // https://juhccazcgrhtzfkvuwsk.supabase.co/storage/v1/object/public/cabin-images/cabin-001.jpg
+
   const { data, error } = await supabase
     .from("cabins")
     .insert([newCabin])
