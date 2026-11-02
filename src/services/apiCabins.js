@@ -9,6 +9,13 @@ export async function getCabins() {
   return data;
 }
 
+export async function createCabin(newCabin) {
+  const { data, error } = await supabase
+    .from("cabins")
+    .insert([{ some_column: "someValue", other_column: "otherValue" }])
+    .select();
+}
+
 export async function deleteCabin(id) {
   const { error, data } = await supabase.from("cabins").delete().eq("id", id);
   if (error) {
