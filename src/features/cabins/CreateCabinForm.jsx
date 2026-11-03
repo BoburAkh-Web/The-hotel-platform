@@ -64,7 +64,7 @@ function CreateCabinForm() {
     },
   });
   function onSubmit(data) {
-    mutate({ ...data, image: data.image.at(0) });
+    mutate({ ...data, image: data.image[0] });
   }
   function onError(errors) {
     console.log(errors);
@@ -119,7 +119,7 @@ function CreateCabinForm() {
           {...register("discount", {
             required: "This field is requaried",
             validate: (value) =>
-              getValues().regularPrice >= value ||
+              getValues().regularPrice <= value ||
               "Discount should be less than Price",
           })}
         />
